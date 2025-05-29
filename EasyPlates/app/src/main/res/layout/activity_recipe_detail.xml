@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".RecipeDetailActivity">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logobanner" />
+
+    <View
+        android:id="@+id/lineView2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#fc8338"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        app:layout_constraintBottom_toTopOf="@+id/navLinearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineView2"
+        app:layout_constraintVertical_bias="0.0"
+        android:paddingBottom="140dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/scrollView2">
+
+            <ImageView
+                android:id="@+id/foodImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/foodImageView"
+                android:background="#fc8338"
+                android:paddingVertical="20dp"
+                android:paddingHorizontal="30dp"
+                android:text="Title"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/headerIngredientsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleTextView"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Ingredients"
+                android:textAlignment="textStart"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ingredientsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerIngredientsTextView"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" />
+
+            <View
+                android:id="@+id/lineView"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#fc8338"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_below="@+id/ingredientsLayout"/>
+
+            <TextView
+                android:id="@+id/headerStepsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lineView"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Instructions"
+                android:textAlignment="textStart"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/stepsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerStepsTextView"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" />
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/stepsLayout"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="#FC8338"
+                android:text="Back" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/navLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageButton
+            android:id="@+id/userImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/usericon" />
+
+        <ImageButton
+            android:id="@+id/homeImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/homeicon" />
+
+        <ImageButton
+            android:id="@+id/infoImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/infoicon" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="411dp"
+        android:layout_height="66dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logobanner" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#fc8338"
+        android:id="@+id/scrollView"
+        app:layout_constraintBottom_toTopOf="@+id/navLinearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView"
+        app:layout_constraintVertical_bias="0.0"
+        android:paddingBottom="140dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:columnCount="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/matchaCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/matchaImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icedmatchalatte" />
+
+                    <TextView
+                        android:id="@+id/matchaTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/matchaImageView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Iced Matcha Latte" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/garlicChickenCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/garlicChickenImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/creamygarlicchicken" />
+
+                    <TextView
+                        android:id="@+id/garlicChickenTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/garlicChickenImageView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Creamy Garlic Chicken" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/adoboCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/adoboImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filipinochickenadobo" />
+
+                    <TextView
+                        android:id="@+id/adoboTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/adoboImageView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Filipino Chicken Adobo" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/macaronsCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/macaronsImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/frenchmacarons" />
+
+                    <TextView
+                        android:id="@+id/macaronsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/macaronsImageView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="French Macarons" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ramenCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ramenImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/homemaderamen" />
+
+                    <TextView
+                        android:id="@+id/ramenTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ramenImageView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Homemade Ramen" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/coffeeCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/coffeeImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icedcoffee" />
+
+                    <TextView
+                        android:id="@+id/coffeeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/coffeeImageView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Iced Coffee" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/lasagnaCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/lasagnaImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:backgroundTint="#C14C4C"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/lasagna" />
+
+                    <TextView
+                        android:id="@+id/lasagnaTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lasagnaImageView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Lasagna" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/beefCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/beefImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/mongolianbeef" />
+
+                    <TextView
+                        android:id="@+id/beefTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/beefImageView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Mongolian Beef" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cinnamonCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/cinnamonImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cinnamonrolls" />
+
+                    <TextView
+                        android:id="@+id/cinnamonTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cinnamonImageView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Cinnamon Rolls" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pancakeCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/pancakeImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pancake" />
+
+                    <TextView
+                        android:id="@+id/pancakeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pancakeImageView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Pancake" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/navLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageButton
+            android:id="@+id/userImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/usericon" />
+
+        <ImageButton
+            android:id="@+id/homeImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/homeicon" />
+
+        <ImageButton
+            android:id="@+id/infoImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/infoicon" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
